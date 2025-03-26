@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,11 +7,10 @@
     <meta name="description" content="Discover the best nutrition, supplements, and protein bars for a healthy lifestyle.">
     <title>Nutrition & Supplements</title>
 
-    <!-- Link to Google Fonts for modern typography -->
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="http://localhost:8080/public/styles.css">
 
-    <!-- Link Stylesheet (Use CodeIgniter base_url helper) -->
-    <link rel="stylesheet" href="<?= base_url('public/styles.css'); ?>">
     <style>
         body {
             font-family: 'Roboto', sans-serif;
@@ -20,29 +20,40 @@
             color: #333;
         }
 
-        header {
-            background-color: #28a745;
-            color: white;
-            padding: 30px 0;
+        /* Navigation Bar */
+        .navbar {
+            background-color: #004225;
+            padding: 15px;
             text-align: center;
         }
-
-        header h1 {
-            margin: 0;
-            font-size: 2.5em;
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            font-weight: bold;
+        }
+        .navbar a:hover {
+            text-decoration: underline;
         }
 
-        header p {
-            font-size: 1.2em;
+        /* Hero Section */
+        .hero {
+            background-image: url('http://localhost:8080/public/images/nutrition_banner.jpg');
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+            color: white;
+            padding: 80px 20px;
+        }
+        .hero h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
+        .hero p {
+            font-size: 1.5em;
         }
 
-        .hero img {
-            width: 100%;
-            height: auto;
-            max-height: 400px;
-            object-fit: cover;
-        }
-
+        /* Content */
         .content {
             max-width: 1200px;
             margin: 40px auto;
@@ -51,27 +62,17 @@
             border-radius: 8px;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
-
         .content h2 {
             font-size: 1.8em;
             color: #333;
-            margin-bottom: 20px;
         }
-
         .content p {
             font-size: 1.1em;
-            line-height: 1.6;
             color: #555;
         }
 
-        .content ul {
-            padding-left: 20px;
-            list-style-type: disc;
-            font-size: 1.1em;
-            color: #555;
-        }
-
-        .btn-view-products, .btn-about-us {
+        /* Buttons */
+        .btn {
             display: inline-block;
             background-color: #28a745;
             color: white;
@@ -79,14 +80,14 @@
             font-size: 1.2em;
             border-radius: 5px;
             text-decoration: none;
-            margin-top: 30px;
-            transition: background-color 0.3s ease;
+            margin: 20px;
+            transition: background-color 0.3s;
         }
-
-        .btn-view-products:hover, .btn-about-us:hover {
+        .btn:hover {
             background-color: #218838;
         }
 
+        /* Footer */
         footer {
             background-color: #333;
             color: white;
@@ -97,19 +98,23 @@
     </style>
 </head>
 <body>
-    <header>
-        <h1>Welcome to Healthy Nutrition</h1>
-        <p>Your guide to supplements, protein bars, and healthy food choices.</p>
-    </header>
-    
+    <!-- Navigation -->
+    <div class="navbar">
+        <a href="https://mi-linux.wlv.ac.uk/~2015319/nutrition/public/products">View Products</a>
+        <a href="https://mi-linux.wlv.ac.uk/~2015319/nutrition/public/products">About Us</a>
+    </div>
+
+    <!-- Hero Section -->
     <section class="hero">
-        <img src="<?= base_url('public/images/nutrition_banner.jpg'); ?>" alt="Healthy Food and Supplements">
+        <h1>Welcome to Healthy Nutrition</h1>
+        <p>Your guide to premium supplements, protein bars, and healthy choices.</p>
     </section>
-    
+
+    <!-- Content Section -->
     <section class="content">
         <h2>Why Nutrition Matters?</h2>
         <p>Good nutrition is the foundation of a healthy lifestyle. Explore our range of supplements and protein bars to support your health goals. Whether you're looking to boost energy, build muscle, or maintain overall wellness, our products are designed to meet your needs.</p>
-        
+
         <h2>Our Products</h2>
         <ul>
             <li>Protein Bars - Packed with nutrients for your active lifestyle.</li>
@@ -118,22 +123,9 @@
         </ul>
     </section>
 
-    <!-- View Products Button (Fixed) -->
-    <div style="text-align: center;">
-        <a href="https://mi-linux.wlv.ac.uk/~2015319/nutrition/public/products" class="btn-view-products">
-            View Products
-        </a>
-    </div>
-
-    <!-- About Us Button (Fixed) -->
-    <div style="text-align: center;">
-        <a href="https://mi-linux.wlv.ac.uk/~2015319/nutrition/public/about" class="btn-about-us">
-            About Us
-        </a>
-    </div>
-
+    <!-- Footer -->
     <footer>
-        <p>&copy; <?= date('Y'); ?> Healthy Nutrition. All rights reserved.</p>
+        <p>&copy; 2025 Healthy Nutrition. All rights reserved.</p>
     </footer>
 </body>
 </html>
