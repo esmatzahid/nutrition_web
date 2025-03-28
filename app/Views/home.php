@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -48,9 +47,14 @@
         .hero h1 {
             font-size: 3em;
             margin-bottom: 10px;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+            background: linear-gradient(to right, #2ecc71, #27ae60);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
         .hero p {
             font-size: 1.5em;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
         }
 
         /* Content */
@@ -101,7 +105,7 @@
     <!-- Navigation -->
     <div class="navbar">
         <a href="https://mi-linux.wlv.ac.uk/~2015319/nutrition/public/products">View Products</a>
-        <a href="https://mi-linux.wlv.ac.uk/~2015319/nutrition/public/products">About Us</a>
+        <a href="https://mi-linux.wlv.ac.uk/~2015319/nutrition/public/about">About Us</a>
     </div>
 
     <!-- Hero Section -->

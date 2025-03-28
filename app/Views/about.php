@@ -16,7 +16,7 @@
         }
 
         header {
-            background-color: #28a745;
+            background-color: #004225; /* Dark Green */
             color: white;
             text-align: center;
             padding: 40px 20px;
@@ -34,16 +34,15 @@
         .about {
             max-width: 1200px;
             margin: 40px auto;
-            padding: 0 20px;
+            padding: 20px;
             background-color: white;
             border-radius: 8px;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            padding-bottom: 30px;
         }
 
         .about h2 {
             font-size: 2em;
-            color: #333;
+            color: #004225;
             margin-top: 20px;
         }
 
@@ -61,9 +60,24 @@
             margin-top: 20px;
         }
 
+        /* Contact Section */
+        .contact {
+            text-align: center;
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #28a745; /* Green */
+            color: white;
+            border-radius: 8px;
+        }
+
+        .contact p {
+            font-size: 1.2em;
+            margin: 5px 0;
+        }
+
         .btn-home {
             display: inline-block;
-            background-color: #007BFF;
+            background-color: #28a745; /* Green */
             color: white;
             padding: 15px 30px;
             font-size: 1.2em;
@@ -74,11 +88,11 @@
         }
 
         .btn-home:hover {
-            background-color: #0056b3;
+            background-color: #218838;
         }
 
         footer {
-            background-color: #333;
+            background-color: #004225;
             color: white;
             text-align: center;
             padding: 20px 0;
@@ -102,6 +116,13 @@
             <li>Scientifically backed supplements.</li>
             <li>Customer satisfaction guaranteed.</li>
         </ul>
+
+        <!-- Contact Section -->
+        <div class="contact">
+            <h2>Contact Us</h2>
+            <p>Email: <a href="mailto:esmatzahid@icloud.com" style="color: white;">esmatzahid@icloud.com</a></p>
+            <p>Phone: <a href="tel:+447857984362" style="color: white;">07857 984362</a></p>
+        </div>
 
         <!-- Home Button -->
         <div style="text-align: center;">

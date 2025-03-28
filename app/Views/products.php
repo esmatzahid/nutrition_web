@@ -1,4 +1,3 @@
-<?php // products.php ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,10 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Products</title>
 
-    <!-- Link to Google Fonts for modern typography -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-
-    <!-- Link Stylesheet (Use CodeIgniter base_url helper) -->
     <link rel="stylesheet" href="<?= base_url('public/styles.css'); ?>">
     <style>
         body {
@@ -21,7 +17,7 @@
         }
 
         header {
-            background-color: #28a745;
+            background-color: #004225;
             color: white;
             text-align: center;
             padding: 40px 20px;
@@ -56,14 +52,15 @@
 
         .product-item img {
             width: 100%;
-            height: 200px;
-            object-fit: cover;
+            height: auto;
+            max-height: 300px;
+            object-fit: contain;
             border-radius: 8px;
         }
 
         .product-item h3 {
             font-size: 1.6em;
-            color: #333;
+            color: #004225;
             margin-top: 15px;
         }
 
@@ -73,9 +70,29 @@
             margin: 10px 0;
         }
 
+        .price {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #28a745;
+        }
+
+        .add-to-cart {
+            background-color: #28a745;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .add-to-cart:hover {
+            background-color: #218838;
+        }
+
         .btn-home {
             display: inline-block;
-            background-color: #007BFF;
+            background-color: #28a745;
             color: white;
             padding: 15px 30px;
             font-size: 1.2em;
@@ -86,7 +103,7 @@
         }
 
         .btn-home:hover {
-            background-color: #0056b3;
+            background-color: #218838;
         }
 
         footer {
@@ -96,29 +113,66 @@
             padding: 20px 0;
             margin-top: 50px;
         }
+
+        /* Cart Icon */
+        .cart-icon {
+            position: absolute;
+            right: 30px;
+            top: 20px;
+            font-size: 1.5em;
+            color: white;
+            cursor: pointer;
+        }
+
+        .cart-icon span {
+            background-color: red;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 50%;
+            font-size: 1em;
+        }
     </style>
 </head>
 <body>
+    <!-- Cart Icon -->
+    <div class="cart-icon" onclick="window.location.href='cart.php'">
+        <img src="cart-icon.png" alt="Cart">
+        <span id="cart-count">0</span> <!-- This shows the number of items in the cart -->
+    </div>
+
     <header>
         <h1>Our Products</h1>
-        <p>Discover high-quality supplements and healthy food options that support your active lifestyle.</p>
+        <p>High-quality supplements for your fitness journey.</p>
     </header>
     
     <section class="products">
         <div class="product-item">
-            <img src="<?= base_url('public/images/protein_bar.jpg'); ?>" alt="Protein Bars">
-            <h3>Protein Bars</h3>
-            <p>Packed with nutrients to fuel your active lifestyle.</p>
+            <img src="https://mi-linux.wlv.ac.uk/~2015319/nutrition/public/images/download.jpg" alt="Whey Protein">
+            <h3>Whey Protein</h3>
+            <p>High-quality protein for muscle growth and recovery.</p>
+            <p class="price">£29.99</p>
+            <button class="add-to-cart" onclick="addToCart('Whey Protein', 29.99)">Add to Cart</button>
         </div>
         <div class="product-item">
-            <img src="<?= base_url('public/images/vitamins.jpg'); ?>" alt="Vitamins">
-            <h3>Vitamins & Supplements</h3>
-            <p>Support your daily health needs with our quality supplements.</p>
+            <img src="https://mi-linux.wlv.ac.uk/~2015319/nutrition/public/images/71Ue2EqyrJL._AC_SY879_.jpg" alt="Creatine">
+            <h3>Creatine Monohydrate</h3>
+            <p>Boost strength and power during workouts.</p>
+            <p class="price">£19.99</p>
+            <button class="add-to-cart" onclick="addToCart('Creatine Monohydrate', 19.99)">Add to Cart</button>
         </div>
         <div class="product-item">
-            <img src="<?= base_url('public/images/organic_food.jpg'); ?>" alt="Organic Food">
-            <h3>Organic Foods</h3>
-            <p>Natural and wholesome food options for your well-being.</p>
+            <img src="https://mi-linux.wlv.ac.uk/~2015319/nutrition/public/images/abe-blue-raz.jpg" alt="Pre-Workout">
+            <h3>Pre-Workout</h3>
+            <p>Increase focus and energy for intense training.</p>
+            <p class="price">£24.99</p>
+            <button class="add-to-cart" onclick="addToCart('Pre-Workout', 24.99)">Add to Cart</button>
+        </div>
+        <div class="product-item">
+            <img src="https://mi-linux.wlv.ac.uk/~2015319/nutrition/public/images/a7214.jpg" alt="BCAA">
+            <h3>BCAA</h3>
+            <p>Support muscle recovery and endurance.</p>
+            <p class="price">£14.99</p>
+            <button class="add-to-cart" onclick="addToCart('BCAA', 14.99)">Add to Cart</button>
         </div>
     </section>
 
