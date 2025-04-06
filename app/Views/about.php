@@ -101,10 +101,27 @@
     </style>
 </head>
 <body>
-    <header>
-        <h1>About Us</h1>
-        <p>Learn more about Healthy Nutrition and our mission.</p>
-    </header>
+<header>
+    <h1>About Us</h1>
+    <p>Learn more about Healthy Nutrition and our mission.</p>
+            <!-- Home Button -->
+            <div style="text-align: center;">
+            <a href="https://mi-linux.wlv.ac.uk/~2015319/nutrition/public/"
+               style="display: inline-block;
+                      background-color: white;
+                      color: #28a745;
+                      padding: 15px 30px;
+                      font-size: 1.2em;
+                      border: 2px solid #28a745;
+                      border-radius: 5px;
+                      text-decoration: none;
+                      margin-top: 40px;
+                      transition: all 0.3s ease;">
+                Go to Home
+            </a>
+        </div>
+</div>
+</header>
     
     <section class="about">
         <h2>Our Mission</h2>
@@ -124,14 +141,7 @@
             <p>Phone: <a href="tel:+447857984362" style="color: white;">07857 984362</a></p>
         </div>
 
-        <!-- Home Button -->
-        <div style="text-align: center;">
-            <a href="https://mi-linux.wlv.ac.uk/~2015319/nutrition/public/" class="btn-home">
-                Go to Home
-            </a>
-        </div>
-    </section>
-    
+
     <footer>
         <p>&copy; <?= date('Y'); ?> Healthy Nutrition. All rights reserved.</p>
     </footer>
